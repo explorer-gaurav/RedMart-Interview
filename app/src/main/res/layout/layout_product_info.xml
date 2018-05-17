@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_info_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.gauravsaluja.redmart.customviews.TextViewNunitoLightFont
+        android:id="@+id/info_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/value_12dp"
+        android:layout_marginLeft="@dimen/value_12dp"
+        android:layout_marginRight="@dimen/value_12dp"
+        android:layout_marginStart="@dimen/value_12dp"
+        android:layout_marginTop="@dimen/value_8dp"
+        android:ellipsize="end"
+        android:gravity="left|start"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_18sp" />
+
+    <com.gauravsaluja.redmart.customviews.TextViewNunitoLightFont
+        android:id="@+id/info_product_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_product_name"
+        android:layout_marginEnd="@dimen/value_12dp"
+        android:layout_marginLeft="@dimen/value_12dp"
+        android:layout_marginRight="@dimen/value_12dp"
+        android:layout_marginStart="@dimen/value_12dp"
+        android:layout_marginTop="@dimen/value_8dp"
+        android:gravity="left|start"
+        android:textColor="@color/light_grey"
+        android:textSize="@dimen/textsize_14sp" />
+
+    <View
+        android:id="@+id/separator_quantity_price"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_1dp"
+        android:layout_below="@id/info_product_quantity"
+        android:layout_marginBottom="@dimen/value_16dp"
+        android:layout_marginTop="@dimen/value_16dp"
+        android:background="@color/divider_color" />
+
+    <com.gauravsaluja.redmart.customviews.TextViewNunitoBoldFont
+        android:id="@+id/info_product_promo_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator_quantity_price"
+        android:layout_marginEnd="@dimen/value_4dp"
+        android:layout_marginLeft="@dimen/value_20dp"
+        android:layout_marginRight="@dimen/value_4dp"
+        android:layout_marginStart="@dimen/value_20dp"
+        android:layout_marginTop="@dimen/value_4dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textsize_18sp" />
+
+    <com.gauravsaluja.redmart.customviews.TextViewNunitoBoldFont
+        android:id="@+id/info_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/info_product_promo_price"
+        android:layout_below="@+id/separator_quantity_price"
+        android:layout_marginTop="@dimen/value_4dp"
+        android:layout_toRightOf="@+id/info_product_promo_price"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/textsize_12sp" />
+
+    <View
+        android:id="@+id/separator_item_actions"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_1dp"
+        android:layout_below="@id/info_product_price"
+        android:layout_marginTop="@dimen/value_16dp"
+        android:background="@color/divider_color" />
+</RelativeLayout>

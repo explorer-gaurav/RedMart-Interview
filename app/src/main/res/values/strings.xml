@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">RedMart</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="list_activity_title">Explore</string>
+    <string name="detail_activity_title">Item Details</string>
+    <string name="action_add_to_cart">Add to cart</string>
+    <string name="action_save_to_list">Save to list</string>
+    <string name="no_results">No Results</string>
+    <string name="no_results_product_listing">Unable to fetch product listing</string>
+    <string name="no_results_product_details">Unable to fetch product details</string>
+    <string name="error_no_internet">Unable to connect, please check your internet connection</string>
+
+    <string name="retry">Retry</string>
+    <string name="action_search">Search</string>
+    <string name="action_cart">Cart</string>
+    <string name="action_share">Share</string>
+</resources>

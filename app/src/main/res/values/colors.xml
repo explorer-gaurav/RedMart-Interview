@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DE142B</color>
+    <color name="colorPrimaryDark">#C71226</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_selector">#50E3E3E3</color>
+    <color name="black">#000000</color>
+    <color name="grey">#4D4D4B</color>
+    <color name="listing_background_color">#ECF0F1</color>
+    <color name="add_to_cart_background_color">#D4D8D8</color>
+    <color name="light_grey">#C6C6C6</color>
+    <color name="description_title_color">#B2B2B2</color>
+    <color name="divider_color">#99CCCCCC</color>
+
+    <color name="placeholder">#AABB00</color>
+</resources>

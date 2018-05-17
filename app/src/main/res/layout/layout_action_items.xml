@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/value_12dp">
+
+    <com.gauravsaluja.redmart.customviews.TextViewNunitoRegularFont
+        android:id="@+id/add_to_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingBottom="@dimen/value_16dp"
+        android:paddingTop="@dimen/value_16dp"
+        android:text="@string/action_add_to_cart"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.gauravsaluja.redmart.customviews.TextViewNunitoRegularFont
+        android:id="@+id/save_to_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="@dimen/value_16dp"
+        android:paddingTop="@dimen/value_16dp"
+        android:text="@string/action_save_to_list"
+        android:textAllCaps="true"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/textsize_16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_to_cart" />
+
+    <View
+        android:id="@+id/separator_actions_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_to_list"
+        android:background="@color/divider_color"/>
+
+</android.support.constraint.ConstraintLayout>

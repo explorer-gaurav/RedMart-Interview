@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    defaultConfig {
+        applicationId "com.gauravsaluja.redmart"
+        minSdkVersion rootProject.ext.androidMinSdkVersion
+        targetSdkVersion rootProject.ext.androidTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.androidAppCompatVersion}"
+    implementation "com.android.support:design:${rootProject.ext.androidAppCompatVersion}"
+    implementation "com.android.support:recyclerview-v7:${rootProject.ext.androidAppCompatVersion}"
+    implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.androidConstraintLayoutVersion}"
+
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okHttpVersion}"
+
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.gsonConverterVersion}"
+
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.reactiveJavaVersion}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofitReactiveAdapterVersion}"
+
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.reactiveAndroidVersion}"
+
+    implementation "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerVersion}"
+
+    implementation "com.jakewharton:butterknife:${rootProject.ext.butterknifeVersion}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknifeVersion}"
+
+    implementation "com.squareup.picasso:picasso:${rootProject.ext.picassoVersion}"
+
+    compileOnly "javax.annotation:jsr250-api:${rootProject.ext.javaxAnnotationVersion}"
+
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:${rootProject.ext.androidEspressoVersion}", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestImplementation("com.android.support.test.espresso:espresso-contrib:${rootProject.ext.androidEspressoVersion}", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
+    testImplementation "org.mockito:mockito-core:${rootProject.ext.mockitoVersion}"
+}
